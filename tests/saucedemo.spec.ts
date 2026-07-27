@@ -12,6 +12,7 @@ test('Verify the login functionality on Sauce Demo page', async ({page}) => {
     await password.fill('secret_sauce');
     await loginButton.click();
 
+    await expect(page).toHaveURL('https://www.saucedemo.com/inventory.html')
     // npx playwright test tests/example.spec.ts --project=chromium --headed
 
 });
